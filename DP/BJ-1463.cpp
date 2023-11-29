@@ -1,7 +1,22 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+
 int n_list[1000001] = { 0, };
+
+
+int make1(int k, int ct);
+
+
+int main() {
+	int n, cnt = 0;
+	n_list[1], n_list[2], n_list[3] = 0,1,1;
+	scanf("%d", &n);
+	if (n < 1 || n>1000000) return 1;
+	cnt = make1(n, 0);
+	printf("%d\n", n_list[n]);
+	return 0;
+}
+
 
 int make1(int k, int ct) {
 	if (k == 1)
@@ -27,14 +42,4 @@ int make1(int k, int ct) {
 	}
 	else
 		return n_list[k];
-}
-
-int main() {
-	int n, cnt = 0;
-	n_list[1], n_list[2], n_list[3] = 0,1,1;
-	scanf("%d", &n);
-	if (n < 1 || n>1000000) return 1;
-	cnt = make1(n, 0);
-	printf("%d\n", n_list[n]);
-	return 0;
 }
